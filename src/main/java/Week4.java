@@ -5,7 +5,7 @@ public class Week4 {
      * @param b
      * @return max of $a and $b
      */
-    public int max2Int(int a, int b) {
+    public static int max2Int(int a, int b) {
         if (a > b) return a;
         return b;
     }
@@ -31,6 +31,7 @@ public class Week4 {
      */
     public static String calculateBMI(double weight, double height) {
         double BMI = weight / (height * height);
+        BMI = (double)Math.round(BMI * 10.0) / 10.0;
         if (BMI < 18.5) return "Thiếu cân";
         if (BMI < 22.9) return "Bình thường";
         if (BMI < 24.9) return "Thừa cân";
